@@ -1,0 +1,7 @@
+{
+  "mgu-store": {"commit": "727f83c62fd2d6504a5f43b8dafd92141be9b89b", "date": "2026-11-08T22:59:51+02:00"},
+  "idrive7-apps": {"commit": "79b8c16d855ef6c4dbef27d4697c460cd60e6ca5", "date": "2026-11-08T22:57:05+01:00"},
+  "idrive-apps": {"commit": "4d49c18d5c94cde4177f3cde7636adf0780471ff", "date": "2026-11-08T21:28:25Z"},
+  "car-apps": {"commit": "7b24cc29e8295e657d244f517a693d3b31affcaf", "date": "2026-11-08T22:52:05+02:00"},
+  "idrive7-8-ssh-root": {"commit": "a43ac32029d9d4f93d1da649042381fb995e7b55", "date": "2026-11-08T23:34:21+01:00"}
+}

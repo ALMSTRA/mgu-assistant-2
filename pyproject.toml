@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mgu-assistant-2"
+version = "2.0.0"
+description = "MGU Assistant 2: instalador y asistente automatizado para BMW iDrive 7 (MGU ID7)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "PySide6>=6.6",
+    # Requerida por la herramienta oficial de SSH (se ejecuta con nuestro propio
+    # interprete empaquetado, asi la laptop no necesita Python).
+    "cryptography>=41.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pytest-qt>=4.2", "pyinstaller>=6.0"]
+
+[project.scripts]
+mgu-assistant-2 = "mgua2.app:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mgua2*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["gui: pruebas que requieren PySide6 / pytest-qt", "net: requieren internet"]

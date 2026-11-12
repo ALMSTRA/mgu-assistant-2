@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+build/
+dist/
+# Datos sensibles: nunca versionar
+data/
+*.pem
+*.ppk
+id_rsa*
+*.log

@@ -1,0 +1,52 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Never paste your VIN, SSH keys or tokens. The app's "Guardar log" output is already redacted; attach that instead of raw upstream logs.
+  - type: dropdown
+    id: step
+    attributes:
+      label: Step
+      options:
+        - Tools / downloads
+        - Environment / Doctor
+        - Diagnostics (ENET)
+        - Coding backup (preflight)
+        - Enable SSH / test SSH
+        - Install MGU Store
+        - App catalog / sources / USB
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version or commit
+      placeholder: v2.0.0-beta.1
+    validations:
+      required: true
+  - type: input
+    id: car
+    attributes:
+      label: Car and head unit software
+      placeholder: e.g. X4 M F98, iDrive 7, BTLD 00003F36_016.012.001
+  - type: textarea
+    id: steps
+    attributes:
+      label: What you did and what happened
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Redacted console log
+      render: text
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: The car was parked and on a stable power supply.
